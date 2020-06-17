@@ -1,5 +1,5 @@
 .idea
 venv
-*.json
+books.json
 index.html
 books
