@@ -30,5 +30,5 @@ chunked_books = more_itertools.chunked(books, 20)
 on_reload()
 server = Server()
 server.watch('template.html', on_reload())
-server.serve(root='.')
+server.serve(root='pages/')
 
