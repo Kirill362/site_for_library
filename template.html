@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="../static/logo.png" sizes="16x16">
-    <link rel="stylesheet" href="../static/bootstrap.min.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
     <title>Online Library</title>
   </head>
   <body>
@@ -36,7 +36,7 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                              <img src="../static/{{book.img_path}}" class="card-img" alt="{{book.title}}">
+                              <img src="../static/images/{{book.img_path}}" class="card-img" alt="{{book.title}}">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
@@ -45,7 +45,7 @@
                                   {% for genre in book.genres %}
                                     <span class="badge badge-light">{{genre}}</span>
                                   {% endfor %}
-                                  <p class="card-text"><small class="text-muted"><a href="../static/{{book.book_path}}" target="_blank">Читать</a></small></p>
+                                  <p class="card-text"><a href="../static/books/{{book.book_path}}" target="_blank">Читать</a></p>
                               </div>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
             {% endfor %}
         </div>
     </div>
-    <script src="../static/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="../static/popper.min.js" crossorigin="anonymous"></script>
-    <script src="../static/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="../static/jquery-3.3.1.slim.min.js"></script>
+    <script src="../static/popper.min.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
   </body>
 </html>
