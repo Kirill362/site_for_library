@@ -4,6 +4,9 @@ from livereload import Server
 import os
 import more_itertools
 import math
+import glob
+
+BOOKS_ON_PAGE = 20
 
 
 def on_reload():
@@ -22,10 +25,13 @@ def on_reload():
 
 os.makedirs("pages/", exist_ok=True)
 
+for file_path in glob.glob("./pages/*.html"):
+    os.remove(file_path)
+
 with open("books.json", "r", encoding="utf-8") as my_file:
     books = my_file.read()
 books = json.loads(books)
-chunked_books = more_itertools.chunked(books, 20)
+chunked_books = more_itertools.chunked(books, BOOKS_ON_PAGE)
 
 on_reload()
 server = Server()
